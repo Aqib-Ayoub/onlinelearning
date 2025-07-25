@@ -106,6 +106,12 @@ class HomeScreen extends StatelessWidget {
                 ),
               ],
             ),
+            Column(
+              children: [
+                Text('Choose your', style: TextStyle()),
+                Text('course'),
+              ],
+            ),
           ],
         ),
       ),
