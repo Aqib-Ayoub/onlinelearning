@@ -12,6 +12,7 @@ class HomeScreen extends StatelessWidget {
       body: Container(
         padding: EdgeInsets.only(top: 35.0, left: 10.0, right: 10.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -106,10 +107,24 @@ class HomeScreen extends StatelessWidget {
                 ),
               ],
             ),
-            Column(
+            Text(
+              'Choose your \ncourse',
+              style: TextStyle(
+                color: AppColors.textPrimary,
+                fontSize: 25,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+            SizedBox(height: 2),
+            Row(
               children: [
-                Text('Choose your', style: TextStyle()),
-                Text('course'),
+                ContainerIcon(
+                  backgroundColor: AppColors.textPrimary,
+                  icon: Icon(
+                    Icons.filter_2_outlined,
+                    color: AppColors.background,
+                  ),
+                ),
               ],
             ),
           ],

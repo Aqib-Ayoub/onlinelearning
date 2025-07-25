@@ -2,15 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:onlinelearning/constants/app_colors.dart';
 
 class ContainerIcon extends StatelessWidget {
-  const ContainerIcon({super.key, required this.icon});
+  const ContainerIcon({super.key, required this.icon, this.backgroundColor});
   final Icon icon;
+  final Color? backgroundColor;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(13.0),
       decoration: BoxDecoration(
-        color: AppColors.borderColor,
+        color: backgroundColor ?? AppColors.borderColor,
         borderRadius: BorderRadius.all(Radius.circular(50.0)),
       ),
       child: icon,
