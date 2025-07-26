@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:onlinelearning/constants/app_colors.dart';
 import 'package:onlinelearning/screens/widgets/container_icon.dart';
 import 'package:onlinelearning/screens/widgets/container_text.dart';
@@ -135,17 +136,64 @@ class HomeScreen extends StatelessWidget {
                     text: 'Design',
                     nText: '10',
                   ),
-                  SizedBox(width: 10.0),
+                  SizedBox(width: 20.0),
                   ContainerText(
                     backgroundColor: AppColors.cardBackground,
                     text: 'Programming',
-                    nText: '10',
+                    nText: '24',
                   ),
                   SizedBox(width: 10.0),
                   ContainerText(
                     backgroundColor: AppColors.cardBackground,
                     text: 'Trading',
                     nText: '10',
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 25),
+            Container(
+              height: 270,
+              padding: EdgeInsets.all(18.0),
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/images/myprof.png'),
+                  alignment: Alignment.bottomRight,
+                ),
+                color: AppColors.primaryNeon,
+                borderRadius: BorderRadius.all(Radius.circular(25.0)),
+              ),
+
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Figma \nDesign app',
+                            style: TextStyle(
+                              color: AppColors.background,
+                              fontSize: 23.0,
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                          SizedBox(height: 6.0),
+                          Text(
+                            'Aqib Ayoub',
+                            style: TextStyle(
+                              color: AppColors.borderColor,
+                              fontSize: 16.0,
+                            ),
+                          ),
+                        ],
+                      ),
+                      ContainerIcon(
+                        icon: Icon(FontAwesomeIcons.heart),
+                        backgroundColor: AppColors.lightGrey,
+                      ),
+                    ],
                   ),
                 ],
               ),
