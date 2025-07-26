@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:onlinelearning/constants/app_colors.dart';
 import 'package:onlinelearning/screens/widgets/container_icon.dart';
+import 'package:onlinelearning/screens/widgets/container_text.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -115,17 +116,39 @@ class HomeScreen extends StatelessWidget {
                 fontWeight: FontWeight.w600,
               ),
             ),
-            SizedBox(height: 2),
-            Row(
-              children: [
-                ContainerIcon(
-                  backgroundColor: AppColors.textPrimary,
-                  icon: Icon(
-                    Icons.filter_2_outlined,
-                    color: AppColors.background,
+            SizedBox(height: 20),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  ContainerIcon(
+                    backgroundColor: AppColors.textPrimary,
+                    icon: Icon(
+                      Icons.filter_alt_outlined,
+                      color: AppColors.background,
+                      size: 30,
+                    ),
                   ),
-                ),
-              ],
+                  SizedBox(width: 10.0),
+                  ContainerText(
+                    backgroundColor: AppColors.cardBackground,
+                    text: 'Design',
+                    nText: '10',
+                  ),
+                  SizedBox(width: 10.0),
+                  ContainerText(
+                    backgroundColor: AppColors.cardBackground,
+                    text: 'Programming',
+                    nText: '10',
+                  ),
+                  SizedBox(width: 10.0),
+                  ContainerText(
+                    backgroundColor: AppColors.cardBackground,
+                    text: 'Trading',
+                    nText: '10',
+                  ),
+                ],
+              ),
             ),
           ],
         ),
