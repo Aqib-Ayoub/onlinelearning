@@ -1,22 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-void main() => runApp(SignUpApp());
-
-class SignUpApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: SignUpPage());
-  }
-}
-
-class SignUpPage extends StatelessWidget {
+class SignUp extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
+
+  SignUp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF5F6FA),
+      backgroundColor: const Color(0xFFF5F6FA),
       body: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 60),
         child: Column(
@@ -42,7 +35,6 @@ class SignUpPage extends StatelessWidget {
               key: _formKey,
               child: Column(
                 children: [
-                  // Full Name
                   _buildTextField(
                     icon: Icons.person,
                     hint: "Full Name",
@@ -50,8 +42,6 @@ class SignUpPage extends StatelessWidget {
                         (value) => value!.isEmpty ? "Enter your name" : null,
                   ),
                   const SizedBox(height: 20),
-
-                  // Email
                   _buildTextField(
                     icon: Icons.email,
                     hint: "Email Address",
@@ -61,8 +51,6 @@ class SignUpPage extends StatelessWidget {
                             value!.contains('@') ? null : "Enter a valid email",
                   ),
                   const SizedBox(height: 20),
-
-                  // Password
                   _buildTextField(
                     icon: Icons.lock,
                     hint: "Password",
@@ -72,8 +60,6 @@ class SignUpPage extends StatelessWidget {
                             value!.length < 6 ? "Password too short" : null,
                   ),
                   const SizedBox(height: 20),
-
-                  // Confirm Password
                   _buildTextField(
                     icon: Icons.lock_outline,
                     hint: "Confirm Password",
@@ -91,7 +77,7 @@ class SignUpPage extends StatelessWidget {
                     child: ElevatedButton(
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
-                          // Handle sign up
+                          // Handle sign up action
                         }
                       },
                       style: ElevatedButton.styleFrom(
@@ -100,7 +86,7 @@ class SignUpPage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(12),
                         ),
                       ),
-                      child: Text(
+                      child: const Text(
                         "Sign Up",
                         style: TextStyle(fontSize: 18, color: Colors.white),
                       ),
@@ -140,8 +126,10 @@ class SignUpPage extends StatelessWidget {
             // Already have an account
             Center(
               child: TextButton(
-                onPressed: () {},
-                child: Text(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: const Text(
                   "Already have an account? Log In",
                   style: TextStyle(color: Colors.blueAccent, fontSize: 16),
                 ),
@@ -169,7 +157,10 @@ class SignUpPage extends StatelessWidget {
         hintText: hint,
         filled: true,
         fillColor: Colors.white,
-        contentPadding: EdgeInsets.symmetric(vertical: 18, horizontal: 16),
+        contentPadding: const EdgeInsets.symmetric(
+          vertical: 18,
+          horizontal: 16,
+        ),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
           borderSide: BorderSide.none,
