@@ -8,7 +8,7 @@ class AppColors {
   // Text colors
   static const Color textPrimary = Color(0xFFFFFFFF); // White text
   static const Color textSecondary = Color(0xFFB5B5B5);
-  static const Color lightGrey = Color(0xFFD5E04C); // Light gray text
+  static const Color lightGrey = Color(0xFFB5B5B5); // Light gray text
 
   // UI elements
   static const Color borderColor = Color(0xFF2C2C2C); // Subtle borders/dividers

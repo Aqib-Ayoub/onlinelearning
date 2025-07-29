@@ -194,16 +194,25 @@ class HomeScreen extends StatelessWidget {
                       Row(
                         children: [
                           ContainerIcon(
-                            icon: Icon(FontAwesomeIcons.heart),
-                            backgroundColor: AppColors.lightGrey,
+                            icon: Icon(
+                              FontAwesomeIcons.heart,
+                              color: AppColors.textPrimary,
+                              size: 15.0,
+                            ),
+                            backgroundColor: AppColors.lightGrey.withOpacity(
+                              0.4,
+                            ),
                           ),
                           SizedBox(width: 10.0),
                           ContainerIcon(
                             icon: Icon(
                               FontAwesomeIcons.bookmark,
                               color: AppColors.textPrimary,
+                              size: 15.0,
                             ),
-                            backgroundColor: AppColors.lightGrey,
+                            backgroundColor: AppColors.lightGrey.withOpacity(
+                              0.4,
+                            ),
                           ),
                         ],
                       ),
