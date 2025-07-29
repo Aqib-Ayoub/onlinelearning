@@ -10,12 +10,12 @@ class ContainerIcon extends StatelessWidget {
   });
   final Icon icon;
   final Color? backgroundColor;
-  final double? padding;
+  final EdgeInsets? padding;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(padding ?? 13.0),
+      padding: padding ?? EdgeInsets.all(13.0),
       decoration: BoxDecoration(
         color: backgroundColor ?? AppColors.borderColor,
         borderRadius: BorderRadius.all(Radius.circular(50.0)),

@@ -151,7 +151,9 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
+
             SizedBox(height: 25),
+            // Featured Course Section
             Container(
               height: 270,
               padding: EdgeInsets.all(18.0),
@@ -194,6 +196,7 @@ class HomeScreen extends StatelessWidget {
                       Row(
                         children: [
                           ContainerIcon(
+                            padding: EdgeInsets.all(10.0),
                             icon: Icon(
                               FontAwesomeIcons.heart,
                               color: AppColors.textPrimary,
@@ -205,6 +208,7 @@ class HomeScreen extends StatelessWidget {
                           ),
                           SizedBox(width: 10.0),
                           ContainerIcon(
+                            padding: EdgeInsets.all(10.0),
                             icon: Icon(
                               FontAwesomeIcons.bookmark,
                               color: AppColors.textPrimary,
@@ -218,9 +222,19 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ],
                   ),
+                  Container(
+                    padding: EdgeInsets.all(10.0),
+                    decoration: BoxDecoration(
+                      color: AppColors.textPrimary,
+                      borderRadius: BorderRadius.circular(25.0),
+                    ),
+                    child: Text('Design Course'),
+                  ),
                 ],
               ),
             ),
+
+            // Featured Course Section end
           ],
         ),
       ),
