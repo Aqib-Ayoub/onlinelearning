@@ -167,6 +167,8 @@ class HomeScreen extends StatelessWidget {
               child: Column(
                 children: [
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -189,9 +191,21 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ],
                       ),
-                      ContainerIcon(
-                        icon: Icon(FontAwesomeIcons.heart),
-                        backgroundColor: AppColors.lightGrey,
+                      Row(
+                        children: [
+                          ContainerIcon(
+                            icon: Icon(FontAwesomeIcons.heart),
+                            backgroundColor: AppColors.lightGrey,
+                          ),
+                          SizedBox(width: 10.0),
+                          ContainerIcon(
+                            icon: Icon(
+                              FontAwesomeIcons.bookmark,
+                              color: AppColors.textPrimary,
+                            ),
+                            backgroundColor: AppColors.lightGrey,
+                          ),
+                        ],
                       ),
                     ],
                   ),
